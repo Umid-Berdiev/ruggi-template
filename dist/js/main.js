@@ -32,6 +32,7 @@ $(document).ready(function() {
     items: 4, 
     autoplay:true,
     dots: true,
+    nav: true,
     dotsEach: true,
     autoplayTimeout: 3000,
     loop: true,

@@ -25,8 +25,13 @@ function css() {
 }
 
 function img() {
-  return src(["src/images/**/*.*"])
-    .pipe(dest('dist/images/'));
+  return src(["src/img/**/*.*"])
+    .pipe(dest('dist/img/'));
+}
+
+function lib() {
+  return src(["src/lib/**/*.*"])
+    .pipe(dest('dist/lib/'));
 }
 
 function js() {
@@ -52,13 +57,13 @@ function serve() {
     server: './dist'
   })
 
-  watch('src/images/**/*.*', series(img)).on('change', sync.reload)
+  watch('src/img/**/*.*', series(img)).on('change', sync.reload)
   watch('src/**.html', series(html)).on('change', sync.reload)
   watch('src/parts/**.html', series(html)).on('change', sync.reload)
   watch('src/js/**.js', series(js)).on('change', sync.reload)
   watch('src/scss/**.scss', series(scss)).on('change', sync.reload)
 }
 
-exports.build = series(clear, scss, css, img, js, html)
-exports.serve = series(clear, scss, css, img, js, html, serve)
+exports.build = series(clear, scss, css, img,lib, js, html)
+exports.serve = series(clear, scss, css, img,lib, js, html, serve)
 exports.clear = clear
