@@ -755,7 +755,7 @@
       </div>
     </div>
 </section>
-<!-- MODAL BEGIN -->
+<!-- MODAL OTZIV BEGIN -->
 <div class="modaled" id="modaled1">
   <div class="modaled-content">
     <h3>Отзыв к товару <br>“Мужские угги классические короткие” </h3>
@@ -798,7 +798,7 @@
   </div>
 </div>
 <!-- MODAL END -->
-<!-- MODAL BEGIN register -->
+<!-- MODAL BEGIN register  -->
 <div class="modaled" id="modalRegisterForm">
   <div class="modaled-content">
     <h1>Дарим скидку 300 рублей на первую покупку.</h1>
@@ -806,13 +806,50 @@
     <form action="#" class="register__form">
       <p>Оставьте номер телефона и получите уникальный промо-код по смс прям сейчас!</p>
       <div class="form-group">
-        <input type="text" placeholder="Номер телефона">
+        <input class="form-control" type="tel" id="phone" placeholder="e.g. +1 702 123 4567" value="+1 ">
       </div>
       <div class="public__offer">
         Нажимая на кнопку, вы соглашаетесь c <a href="#">условиями обработки информации</a>
       </div>
-        <button type="submit" class="link-button">Получить код</button>
+      <button type="submit" class="link-button">Получить код</button>
     </form>
+  </div>
+</div>
+<!-- MODAL END -->
+<!-- MODAL BEGIN register  -->
+<div class="modaled" id="modalRegisterForm2">
+  <div class="modaled-content">
+    <h1>Вход</h1>
+    <button type="button" class="modaled-close close__btn"></button>
+    <form action="#" class="register__form">
+      <p>Авторизируйтесь в системе, для того, что бы оставить отзыв о товаре.</p>
+      <div class="form-group">
+        <input class="form-control" type="tel" id="phone2" placeholder="e.g. +1 702 123 4567" value="+1 ">
+      </div>
+      <div class="public__offer">
+        Нажимая на кнопку, вы соглашаетесь c <a href="#">условиями обработки информации</a>
+      </div>
+      <button type="submit" class="link-button">Получить код</button>
+    </form>
+  </div>
+</div>
+<!-- MODAL END -->
+<!-- MODAL BEGIN register  -->
+<div class="modaled" id="modalNews">
+  <div class="modaled-content">
+    <h1>Официальная страница RUGGI <img src="img/vk.svg" alt=""> </h1>
+    <button type="button" class="modaled-close close__btn"></button>
+    <div class="news__ruggi__in__popup">
+      <p>Будь вкурсе последних новостей Ruggi</p>
+      <div class="gallerys">
+        <img src="img/talk/1.jpg" alt="">
+        <img src="img/talk/2.jpg" alt="">
+        <img src="img/talk/3.jpg" alt="">
+        <img src="img/talk/1.jpg" alt="">
+        <img src="img/talk/2.jpg" alt="">
+      </div>
+      <a href="#" class="link-button">Перейти</a>
+    </div>
   </div>
 </div>
 <!-- MODAL END -->
@@ -828,4 +865,11 @@
     </div>
   </div>
 </section>
+<div class="container" >
+  <div class="popup__links">
+    <button type="button" class="modaled-open write__review" data-modaled-id="modalRegisterForm">popup1</button>
+    <button type="button" class="modaled-open write__review" data-modaled-id="modalRegisterForm2">popup2</button>
+    <button type="button" class="modaled-open write__review" data-modaled-id="modalNews">popup3</button>
+  </div>
+</div>
 @@include('parts/footer.html')
