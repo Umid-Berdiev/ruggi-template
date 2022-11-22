@@ -1,0 +1,313 @@
+@@include('parts/header.html')
+<section class="wrapper wrapper--basket">
+  <div class="ycont container">
+    <div class="breadcrumbs">
+      <a href="#">Главная</a>
+      <a href="#">Корзина</a>
+      <span>Оформление заказа</span>
+    </div>
+    <h2 class="breadcrumbs__title">Оформление заказа</h2>
+    <hr class="basket__hr">
+    <div class="row basket__row">
+      <div class="col-content basket__content">
+        <div class="basket__card">
+          <div class="checkout__form__contacts">
+            <h3 class="title">
+              Контакты
+            </h3>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">ФИО</label>
+                  <input type="text" value="Иванов Иван Иванович" disabled>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">Телефон</label>
+                  <input type="tel" value="+ 7 918 344 35 35" disabled>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">Email</label>
+                  <input type="email" value="Ruggi@mail.ru" disabled>
+                </div>
+              </div>
+            </div>
+            <label for="k3" class="checkbox__style">
+              <input type="checkbox" id="k3" name="radio__comment">
+              <span class="for__check"></span>
+              Согласен на новостную рассылку
+            </label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xl-8">
+            <div class="basket__card">
+              <div class="checkout__form__contacts">
+                <h3 class="title">
+                  Доставка
+                </h3>
+                <div class="row">
+                  <div class="col-lg-6">
+                    <div class="form__groups">
+                      <label for="">Регион</label>
+                      <input type="text" value="Краснодарский край" disabled>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__groups">
+                      <label for="">Город</label>
+                      <input type="text" value="Сочи" disabled>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__groups">
+                      <label for="">Адрес доставки</label>
+                      <input type="text" value="">
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="form__groups">
+                          <label for="">Номер дома</label>
+                          <input type="number" value="">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form__groups">
+                          <label for="">Квартира</label>
+                          <input type="number" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="form__groups">
+                      <label for="">Способ доставки </label>
+                      <div class="block__radiobutton">
+                        <input type="radio" id="sdek">
+                        <label for="sdek">
+                          <span class="forCircle"></span>
+                          Курьер СДЭК
+                          <div class="right__block">
+                            <div class="free">Бесплатно</div>
+                          </div>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-4">
+            <div class="basket__card">
+              <div class="checkout__form__contacts">
+                <h3 class="title">
+                  Комментарий к заказу
+                </h3>
+                <div class="form__groups comment__order">
+                  <div class="top__comment__order">
+                    <label for="">Сообщение</label>
+                    <label for="">20/1000</label>
+                  </div>
+                  <textarea>Позвоните пожалуйста заранее, перед доставкой</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="basket__card">
+          <div class="checkout__form__contacts">
+            <h3 class="title">
+              Метод оплаты
+            </h3>
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">
+                    Наличные
+                    <div class="tooltip--custom">
+                      <img src="img/info.svg" alt="">
+                      <div class="body__custom__tooltip">
+                        Оплатить наличными возможно только при 100% предоплате.
+                      </div>
+                    </div>
+                  </label>
+                  <div class="block__radiobutton">
+                    <input type="radio" name="jgh" id="sdek55">
+                    <label for="sdek55">
+                      <span class="forCircle"></span>
+                      При получении товара
+                      <div class="right__block">
+                        <div class="disc">-3%</div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">
+                    Картой онлайн
+                    <div class="tooltip--custom">
+                      <img src="img/info.svg" alt="">
+                      <div class="body__custom__tooltip">
+                        При <b>100%</b> оплате картой на сайте предоставляется дополнительная скидка <b>-3%</b> на общую сумму заказа и резерв товара закрепляется за вами. Оплата проходит по защищенному протоколу SSL.
+                      </div>
+                    </div>
+                  </label>
+                  <div class="block__radiobutton">
+                    <input type="radio" name="jgh" id="sdek5sdv">
+                    <label for="sdek5sdv">
+                      <span class="forCircle"></span>
+                      При 100% оплате на сайте
+                      <div class="right__block">
+                        <div class="disc">-3%</div>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">Рассрочка</label>
+                  <div class="block__radiobutton discounted">
+                    <input type="radio" name="jgh" id="ss">
+                    <label for="ss">
+                      <span class="forCircle"></span>
+                      В рассрочку от 3 до 12 месяцев
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <hr class="per_hr">
+            <div class="period">
+              <div class="top">
+                <h3 class="title">Период рассрочки</h3>
+                <span>Необходимо заполнить все поля ниже, далее нажать «Отправить заказ»</span>
+              </div>
+              <div class="row">
+                <div class="col-lg-2">
+                  <div class="block__radiobutton">
+                    <input type="radio" name="lmd" id="mm">
+                    <label for="mm">
+                      <span class="forCircle"></span>
+                      3 месяца
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="block__radiobutton">
+                    <input type="radio" name="lmd" id="mm4">
+                    <label for="mm4">
+                      <span class="forCircle"></span>
+                      4 месяца
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="block__radiobutton">
+                    <input type="radio" name="lmd" id="mm6">
+                    <label for="mm6">
+                      <span class="forCircle"></span>
+                      6 месяца
+                    </label>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <div class="block__radiobutton">
+                    <input type="radio" name="lmd" id="mm10">
+                    <label for="mm10">
+                      <span class="forCircle"></span>
+                      10 месяца
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3 info__month__pay">
+                <h4>Eжемесячный платеж</h4>
+                <span>3 840 руб.</span>
+              </div>
+              <div class="col-lg-2 info__month__pay">
+                <h4>Переплата</h4>
+                <span>0%</span>
+              </div>
+              <div class="col-lg-4 info__month__pay">
+                <h4>Первоначальный взнос </h4>
+                <span>0%</span>
+              </div>
+            </div>
+            <hr class="per_hr">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">ФИО</label>
+                  <input type="text" value="Иванов Иван Иванович">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">Телефон</label>
+                  <input type="tel" value="+ 7 918 344 35 35">
+                </div>
+              </div>
+              <div class="col-lg-4">
+                <div class="form__groups">
+                  <label for="">Email</label>
+                  <input type="email" value="Ruggi@mail.ru">
+                </div>
+              </div>
+            </div>
+            <label for="k3sdvaaa" class="checkbox__style">
+              <input type="checkbox" id="k3sdvaaa" name="radio__comment">
+              <span class="for__check"></span>
+              Я принимаю <a href="#">условия передачи информации</a>
+            </label>
+            <div class="oferta__block">
+                НЕ ЯВЛЯЕТСЯ ОФЕРТОЙ! <br>Срок рассрочки, размер ежемесячного платежа и прочие условия определяются Банком при рассмотрении Вашей заявки.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="customes col-right">
+        <div class="basket__card-order">
+          <div class="modal-basket__header">
+            <p>Оформление заказа</p>
+          </div>
+          <div class="basket__card-order-item">
+            <span>4 товара на сумму</span>
+            <div class="basket__card-order-dashed"></div>
+            <b>7 490 ₽</b>
+          </div>
+          <div class="basket__card-order-item red">
+            <span>Скидка</span>
+            <div class="basket__card-order-dashed"></div>
+            <b>-7 490 ₽</b>
+          </div>
+          <div class="basket__card-promo">
+            <input type="text" placeholder="Введите промокод">
+            <button class="basket__card-promo-btn">Применить</button>
+          </div>
+          <div class="basket__card-order-item end">
+            <span>Итого</span>
+            <div class="basket__card-order-dashed"></div>
+            <b>7 490 ₽</b>
+          </div>
+          <button onclick="location.href = '/check.html';" class="modal-basket__button basket__card-button active button">Оформить заказ</button>
+          <p class="basket__card-order-down">
+            Если возникнут какие-то вопросы, просьба связаться с нашим отделом продаж: <br>
+            по телефону <a href="tel:88001006628">8 (800) 100-66-28</a> или <a href="#">WhatsApp</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+@@include('parts/footer.html')
