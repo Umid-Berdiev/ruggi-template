@@ -61,6 +61,12 @@
       } else {
         $('.back-to-top').removeClass('show')
       }
+     // if($(window).scrollTop() + $(window).height() == $(document).height()){
+     //    $('body').addClass('showFooter')
+     //  } else {
+     //    $('body').removeClass('showFooter')
+     //  }
+       
     });
 
     $('.custom__tooltip button').on('click', function() {

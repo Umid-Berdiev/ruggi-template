@@ -1,6 +1,12 @@
 // variables
 $zmgreen:#009C8E;
 
+@mixin desklg {
+  @media (max-width: 1600px) {
+    @content;
+  }
+}
+
 @mixin desk {
   @media (max-width: 1500px) {
     @content;
@@ -29,10 +35,6 @@ $zmgreen:#009C8E;
   @media (max-width: 350px) {
     @content;
   }
-}
-
-.container {
-  max-width: 1230px;
 }
 
 /*********************************SECTION__BEGIN********************/
@@ -1086,10 +1088,6 @@ section.view__product {
   @include ipad {
     padding-top: 0;
   }
-
-  .container {
-    max-width: 1600px;
-  }
 }
 
 .view__product__main {
@@ -1800,6 +1798,12 @@ section.view__product {
 
 .container {
   max-width: 1510px;
+  @include desklg{
+    max-width: 92.5vw;
+  }
+  @include mobile{
+    max-width: 100%;
+  }
 }
 
 section.tabs {
@@ -3267,7 +3271,7 @@ section.tabs {
 
   @include mobile {
     max-width: calc(100vw - 30px);
-    margin-left: 15px;
+    margin-left: 0px;
     display: block;
   }
 
@@ -3439,6 +3443,13 @@ section.wrapper.wrapper--basket {
 
     &:before {
       display: none !important;
+    }
+  }
+}
+body{
+  &.showFooter{
+    .back-to-top{
+      bottom: 323px;
     }
   }
 }
