@@ -40,6 +40,12 @@ $zmgreen:#009C8E;
 /*********************************SECTION__BEGIN********************/
 
 .ycont {
+  &.catalog__ycont{
+//   @include mobile {
+// padding: 0;
+//   }
+
+  }
   @include ipad_pro {
     padding-left: 15px;
     padding-right: 15px;
@@ -1801,9 +1807,9 @@ section.view__product {
   padding-left: 65px;
   padding-right: 65px;
 
-  @include desklg {
-    max-width: 92.5vw;
-  }
+  // @include desklg {
+  //   max-width: 92.5vw;
+  // }
 
   @include ipad_pro {
     padding-left: 15px;
@@ -3546,5 +3552,13 @@ body {
   @include mobile {
     margin: 0 -10px;
     width: calc(100% + 20px);
+  }
+} 
+.breadcrumbs__title{
+  margin: 15px 0;
+}
+.catalog__section{
+  .breadcrumbs{
+    margin: 20px 0;
   }
 }
