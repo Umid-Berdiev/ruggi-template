@@ -1797,10 +1797,17 @@ section.view__product {
 }
 
 .container {
-  max-width: 1510px;
+  max-width: 100%;
+  padding-left: 65px;
+  padding-right: 65px;
 
   @include desklg {
     max-width: 92.5vw;
+  }
+
+  @include ipad_pro {
+    padding-left: 15px;
+    padding-right: 15px;
   }
 
   @include mobile {
@@ -2943,8 +2950,13 @@ section.tabs {
 }
 
 .ycont.container {
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 65px;
+  padding-right: 65px;
+
+  @include ipad_pro {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 }
 
 .news__ruggi__in__popup {
@@ -3520,8 +3532,19 @@ body {
     margin: auto;
   }
 }
-.basket__row{
-  @include ipad_pro{
+
+.basket__row {
+  @include ipad_pro {
     flex-wrap: wrap;
+  }
+}
+
+.class__owl-carousel {
+  width: calc(100% + 52px);
+  margin: 0 -26px;
+
+  @include mobile {
+    margin: 0 -10px;
+    width: calc(100% + 20px);
   }
 }
