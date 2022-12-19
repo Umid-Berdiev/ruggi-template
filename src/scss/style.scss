@@ -1,5 +1,5 @@
 // variables
-$zmgreen:#009C8E;
+$zmgreen: #009C8E;
 
 @mixin desklg {
   @media (max-width: 1600px) {
@@ -40,12 +40,20 @@ $zmgreen:#009C8E;
 /*********************************SECTION__BEGIN********************/
 
 .ycont {
-  &.catalog__ycont{
-//   @include mobile {
-// padding: 0;
-//   }
+  &.catalog__ycont {
+    .row {
+      @include mobile {
+        margin: 0;
+      }
+
+    }
+
+    @include mobile {
+      padding: 0;
+    }
 
   }
+
   @include ipad_pro {
     padding-left: 15px;
     padding-right: 15px;
@@ -75,7 +83,10 @@ $zmgreen:#009C8E;
 
 body {
   padding-top: 122px;
-  // min-height: 150vh;
+
+  @include ipad_pro(){
+    padding-top: 62px;
+  }
 
   &.fixed__top {
     header {
@@ -542,19 +553,31 @@ header {
       }
     }
 
-    h4 {
+    h4,
+    .dies {
       font-size: 16px;
-      line-height: 1.2;
+      line-height: 23px;
       font-weight: 600;
       margin-bottom: 5px;
       letter-spacing: 1px;
+      padding: .25em 1rem .25em 0 !important;
+
+      @include ipad {
+        padding: 0 !important;
+      }
+
+      b {
+        line-height: 1;
+      }
     }
 
     .level-1 {
       display: flex;
       justify-content: space-between;
 
-      >li {}
+      >li {
+        min-width: 200px;
+      }
 
       .level-2 {
         li {
@@ -1163,7 +1186,7 @@ section.view__product {
 
       img {
         width: 620px;
-        height: 550px;
+        height: 497px;
         object-fit: contain;
         margin: auto;
         object-position: center;
@@ -1700,8 +1723,11 @@ section.view__product {
       line-height: 17px;
       color: #202020;
       text-decoration: underline;
+      display: inline-flex;
+      align-items: center;
 
-      i {
+      i,
+      img {
         padding-right: 7px;
       }
     }
@@ -1787,7 +1813,8 @@ section.view__product {
     line-height: 15px;
     color: #202020;
 
-    i {
+    i,
+    img {
       padding-right: 4px;
     }
   }
@@ -3005,6 +3032,11 @@ section.tabs {
   width: 100%;
   padding: 5px 10px;
 
+  @include mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
   h3.title {
     font-weight: 600;
     font-size: 20px;
@@ -3108,6 +3140,9 @@ section.tabs {
     .forCircle {
       width: 15px;
       height: 15px;
+      min-width: 15px;
+      min-height: 15px;
+      flex: 0 0 15px;
       border: 1px solid #262D19;
       display: inline-flex;
       align-items: center;
@@ -3120,6 +3155,10 @@ section.tabs {
         content: "";
         width: 9px;
         height: 9px;
+        width: 9px;
+        height: 9px;
+        min-width: 9px;
+        min-height: 9px;
         border-radius: 50%;
         display: block;
         background-color: #262D19;
@@ -3239,6 +3278,25 @@ section.tabs {
       color: #8B8B8B;
     }
   }
+
+  .row {
+    @include mobile {
+      margin: 0 -10px;
+    }
+
+    .col-lg-2 {
+      @include mobile {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding: 0 10px;
+
+        label {
+          font-size: 14px;
+          justify-content: flex-start;
+        }
+      }
+    }
+  }
 }
 
 .per_hr {
@@ -3250,6 +3308,10 @@ section.tabs {
 
   @include mobile {
     margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
   }
 
   h4 {
@@ -3260,6 +3322,7 @@ section.tabs {
 
     @include mobile {
       margin-bottom: 0;
+      font-size: 18px;
     }
   }
 
@@ -3270,6 +3333,12 @@ section.tabs {
     color: #AE1F25;
     display: block;
     margin-bottom: 15px;
+
+    @include mobile {
+      text-align: right;
+      font-size: 18px;
+      margin-bottom: 0;
+    }
 
   }
 }
@@ -3533,6 +3602,10 @@ body {
 
 }
 
+header .header__top p.adress {
+  margin-left: 0;
+}
+
 .header__logo {
   @include ipad_pro {
     margin: auto;
@@ -3546,19 +3619,204 @@ body {
 }
 
 .class__owl-carousel {
-  width: calc(100% + 52px);
-  margin: 0 -26px;
+  width: calc(100% + 32px);
+  margin: 0 -16px;
 
-  @include mobile {
-    margin: 0 -10px;
-    width: calc(100% + 20px);
+  @include ipad_pro {
+    margin: 0 -15px;
+    width: calc(100% + 30px);
   }
-} 
-.breadcrumbs__title{
+}
+
+.sorting__right {
+  @include ipad() {
+    display: flex;
+  }
+
+  .sorting-full {
+    img {
+      @include ipad() {
+        min-width: 15px;
+        height: 15px;
+        margin-top: -1px;
+      }
+    }
+
+  }
+}
+
+.sorting {
+  @include ipad {
+    margin-bottom: 0;
+  }
+}
+
+.catalog {
+  &.full {
+    .catalog__item {
+      @include ipad {
+        border-top: 0;
+      }
+
+      &:nth-child(2) {
+        @include ipad {
+          padding-top: 0px !important;
+        }
+      }
+    }
+  }
+
+  &:not(.full) {
+    .catalog__item {
+      &:nth-child(2n) {
+        @include ipad {
+          border-top: 0;
+        }
+      }
+
+      &:nth-child(2n+1) {
+        @include ipad {
+          border-right: 0;
+          border-top: 0;
+        }
+      }
+
+      &:nth-child(1),
+      &:nth-child(2) {
+        @include ipad {
+          padding-top: 30px;
+          border-top: transparent;
+        }
+      }
+    }
+  }
+
+}
+
+// .catalog__left-mobile {
+//   @include mobile {
+//     overflow-x: hidden;
+//   }
+// }
+
+.containered {
+  .row {
+    >div {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .catalog__left {
+      padding-right: 0;
+
+      @include ipad {
+        padding-right: 15px;
+      }
+    }
+
+    .content__catalog {
+      padding-left: 0;
+
+      @include ipad {
+        padding-left: 15px;
+      }
+
+      @include mobile {
+        padding: 0;
+      }
+    }
+  }
+}
+
+.breadcrumbs__title {
   margin: 15px 0;
 }
-.catalog__section{
-  .breadcrumbs{
+
+.catalog__section {
+  .breadcrumbs {
     margin: 20px 0;
+  }
+}
+
+.catalog__left {
+  @include ipad {
+    z-index: 9999;
+    max-height: 100vh;
+  }
+
+  @include mobile {
+    max-width: calc(100vw - 22px);
+  }
+}
+
+body {
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    z-index: 9998;
+    transition: all .3s;
+    pointer-events: none;
+  }
+
+  &.active-filter {
+    @include ipad {
+      overflow-y: hidden;
+      height: 100vh;
+
+      &:after {
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+.class__link {
+  transition: all .2s;
+
+  &:hover {
+    border-color: #AE1F25;
+  }
+}
+
+.collection__item-content {
+  p {
+    line-height: 25px;
+    height: 25px;
+    overflow: hidden;
+    display: block;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+.collection__item-price-old {
+  color: #AEAEAE;
+}
+
+#sync2 {
+  &:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 70px;
+    z-index: 2;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4990371148459384) 64%, rgba(255, 255, 255, 0.75) 100%);
+    @include ipad_pro(){
+      display: none;
+    }
   }
 }

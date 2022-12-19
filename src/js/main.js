@@ -14,9 +14,11 @@ $(document).ready(function() {
   }); 
   $(".sorting__button-filter").on('click touch',function () {    
     $(".catalog__left").addClass('active');
+    $("body").addClass('active-filter');
   }); 
   $(".catalog__left-mobile-close").on('click touch',function () {    
     $(".catalog__left").removeClass('active');
+    $("body").removeClass('active-filter');
   }); 
 
   $('.first__owl-carousel').owlCarousel({

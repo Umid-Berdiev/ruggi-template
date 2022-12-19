@@ -31,6 +31,15 @@
 
   $(document).ready(function() {
 
+    $('.block__radiobutton input').on('change', function(){
+      if($('.discounted input:radio').is(':checked')){
+        $('.block__for__dis').css('display', 'block')
+      }else{
+        $('.block__for__dis').css('display', 'none')
+
+      }
+    })
+
 
     if ($(window).width() < 768) {
       $('.search__btn').on('click', function() {
@@ -50,6 +59,10 @@
           $('.level2 ').removeClass('opened')
           $('.header__nav').removeClass('opened')
           $('body').removeClass('openSidebar')
+        }
+        if (!$(e.target).is('.sorting__button-left, .sorting__button-left *, .catalog__left , .catalog__left *')){
+          $(".catalog__left").removeClass('active');
+    $("body").removeClass('active-filter');
         }
       })
 
