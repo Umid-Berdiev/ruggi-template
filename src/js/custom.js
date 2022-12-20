@@ -5,11 +5,15 @@
       input2 = document.querySelector("#phone2")
 
     var iti = window.intlTelInput(input, {
+      initialCountry: "ru",
+      onlyCountries: ["ru", "uz", "am", "az", "by", "kg", "kz", "md", "tm", "tj", "ua", "mn"],
       hiddenInput: "full_phone",
       utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js"
     });
 
      var iti2 = window.intlTelInput(input2, {
+      initialCountry: "ru",
+      onlyCountries: ["ru", "uz", "am", "az", "by", "kg", "kz", "md", "tm", "tj", "ua", "mn"],
       hiddenInput: "full_phone",
       utilsScript: "https://intl-tel-input.com/node_modules/intl-tel-input/build/js/utils.js"
     });
@@ -30,6 +34,7 @@
 
 
   $(document).ready(function() {
+    // $('.popup__links button:first-child').trigger('click')
 
     $('.block__radiobutton input').on('change', function(){
       if($('.discounted input:radio').is(':checked')){
