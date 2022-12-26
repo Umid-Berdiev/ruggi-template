@@ -20,7 +20,7 @@ $zmgreen: #009C8E;
 }
 
 @mixin ipad {
-  @media (max-width: 991px) {
+  @media (max-width: 1023px) {
     @content;
   }
 }
@@ -3636,6 +3636,10 @@ header .header__top p.adress {
     display: flex;
   }
 
+  @include mobile() {
+    overflow: hidden;
+  }
+
   .sorting-full {
     img {
       @include ipad() {
@@ -3721,11 +3725,25 @@ header .header__top p.adress {
       padding-left: 0;
 
       @include ipad {
-        padding-left: 15px;
-      }
-
-      @include mobile {
         padding: 0;
+      }
+    }
+
+    &.content__catalog-down {
+
+      .content__catalog {
+        @include ipad_pro() {
+          padding-left: 15px
+        }
+
+        @include ipad() {
+          padding-right: 15px
+        }
+
+        @include mobile {
+          padding-left: 0;
+          padding-right: 0;
+        }
       }
     }
   }
@@ -3856,15 +3874,89 @@ body {
     left: 5px;
     top: 5px;
   }
-  .iti__flag-container{
+
+  .iti__flag-container {
     min-width: 70px;
-    .iti__selected-flag{
+
+    .iti__selected-flag {
       padding-left: 20px;
       padding-top: 10px;
     }
   }
-  input{
+
+  input {
     padding-left: 80px !important;
   }
-  
+
 }
+
+.accordion__info>label input:checked+p::before {
+  background-color: #000;
+}
+
+a.catalog__item-img {
+  transition: all .2s;
+
+  &:hover {
+    opacity: .9;
+  }
+}
+
+.iti--container {
+  @include ipad {
+    z-index: 999999;
+  }
+}
+
+.owl-dot.active::before {
+  @include mobile {
+    -webkit-animation-duration: 10s;
+    animation-duration: 10s;
+  }
+}
+
+.talk__new-owl {
+  overflow: hidden;
+}
+
+.content__catalog {
+  @include ipad() {
+    overflow: hidden;
+  }
+}
+
+.collection__owl-carousel,
+.popular__owl-carousel,
+.talk__owl-carousel,
+.talk__new-owl {
+  @include ipad_pro() {
+    width: calc(100% + 30px);
+    margin: 0 -15px;
+  }
+}
+
+.wrapper--first {
+  .cover-bg {
+    @include ipad_pro() {
+      img {
+        object-position: left;
+      }
+    }
+
+    @include mobile() {
+      object-position: center;
+    }
+  }
+}
+
+// .catalog__text {
+
+// }
+// .containered .row.content__catalog-down {
+//   @include ipad_pro() {
+//     padding-left: 15px;
+//   }
+//   @include ipad() {
+//     padding-left: 0;
+//   }
+// }
