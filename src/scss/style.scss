@@ -3895,10 +3895,33 @@ body {
 }
 
 a.catalog__item-img {
-  transition: all .2s;
+  position: relative;
+
+  img {
+    transition: all .5s;
+  }
+
+  .faded {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    object-fit: contain;
+    object-position: center;
+    opacity: 0;
+    margin: 0 auto;
+    background-color: #fff;
+  }
 
   &:hover {
-    opacity: .9;
+    img {
+      opacity: 0;
+    }
+
+    .faded {
+      opacity: 1;
+    }
   }
 }
 
@@ -3945,6 +3968,15 @@ a.catalog__item-img {
 
     @include mobile() {
       object-position: center;
+    }
+  }
+}
+
+body {
+  &.openSidebar {
+    @include ipad_pro() {
+      overflow-y: hidden;
+      height: 100vh;
     }
   }
 }

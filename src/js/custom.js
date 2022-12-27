@@ -52,7 +52,8 @@ $(document).ready(function () {
     })
   }
   if ($(window).width() < 1299) {
-    $('.hamburger__btn').on('click', function () {
+    $('.hamburger__btn').on('click', function (e) {
+      e.preventDefault()
       $('.header__nav').toggleClass('opened')
       $('body').toggleClass('openSidebar')
       $('.header__search').removeClass('opened')
